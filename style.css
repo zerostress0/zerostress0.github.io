@@ -1,119 +1,173 @@
+/* الخط العام */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(to bottom, #e6f0ff, #ffffff);
-  color: #003366;
+  font-family: 'Cairo', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to bottom right, #e9f2ff, #f8fbff);
+  color: #222;
+  scroll-behavior: smooth;
 }
 
-header {
-  background-color: #007BFF;
+/* شريط التنقل */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #007bff;
   color: white;
-  padding: 30px 20px;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.8em;
-}
-
-header p {
-  font-size: 1.2em;
-  margin-top: 10px;
-}
-
-.button {
-  margin-top: 25px;
-  padding: 12px 30px;
-  font-size: 1em;
-  background-color: white;
-  color: #007BFF;
-  border: 2px solid white;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.button:hover {
-  background-color: #0056b3;
-  color: white;
-  border-color: #0056b3;
-}
-
-section {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-section h2 {
-  font-size: 2em;
-  color: #007BFF;
-}
-
-footer {
-  background-color: #f2f2f2;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.9em;
-  color: #666;
-}
-.icons-bg {
-  position: fixed;
+  padding: 15px 30px;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.icon {
-  position: absolute;
-  font-size: 2rem;
-  opacity: 0.2;
-  animation: float 15s linear infinite;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(100vh) rotate(0deg);
-  }
-  100% {
-    transform: translateY(-10vh) rotate(360deg);
-  }
-}
-
-/* مواقع عشوائية للأيقونات */
-.icon:nth-child(1) { left: 10%; animation-delay: 0s; }
-.icon:nth-child(2) { left: 30%; animation-delay: 3s; }
-.icon:nth-child(3) { left: 50%; animation-delay: 6s; }
-.icon:nth-child(4) { left: 70%; animation-delay: 1s; }
-.icon:nth-child(5) { left: 85%; animation-delay: 5s; }
-.icon:nth-child(6) { left: 40%; animation-delay: 2s; }
-
-#welcome-banner {
-  position: fixed;
-  bottom: -100px;
-  right: 20px;
-  background-color: #007BFF;
+.nav-links a {
   color: white;
-  padding: 15px 25px;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffe600;
+}
+
+/* واجهة الترحيب */
+.hero {
+  background: linear-gradient(to right, #007bff, #66b2ff);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.hero button {
+  background: #fff;
+  color: #007bff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.hero button:hover {
+  background: #ffe600;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* الأقسام */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* كروت الخدمات */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  font-size: 1em;
-  opacity: 0;
-  transition: all 1s ease;
-  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s;
 }
 
-#welcome-banner.show {
-  bottom: 30px;
-  opacity: 1;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-#welcome-banner #close-btn {
-  position: absolute;
-  top: 5px;
+/* قسم من نحن */
+.about p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+/* اتصل بنا */
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #0056b3;
+}
+
+/* الفوتر */
+footer {
+  background: #004080;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* استجابة الهاتف */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
   left: 10px;
   cursor: pointer;
   font-size: 1.2em;
