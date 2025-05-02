@@ -1,22 +1,16 @@
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('header');
-  header.style.backgroundColor = window.scrollY > 50 ? '#006bb3' : 'rgba(0,123,255,0.8)';
-});
+document.addEventListener("DOMContentLoaded", () => {
+  const searchBar = document.getElementById("searchBar");
 
-// Animate section titles on scroll
-const sections = document.querySelectorAll('section');
-const options = {
-  threshold: 0.5
-};
+  searchBar.addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    const sections = document.querySelectorAll("section");
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.animation = 'fadeIn 1s forwards';
-    }
+    sections.forEach((sec) => {
+      if (sec.innerText.toLowerCase().includes(query)) {
+        sec.style.display = "block";
+      } else {
+        sec.style.display = "none";
+      }
+    });
   });
-}, options);
-
-sections.forEach(section => {
-  observer.observe(section);
 });
