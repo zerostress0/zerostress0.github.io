@@ -1,74 +1,75 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zero Stress | منصة الدعم الدراسي</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet"/>
-</head>
-<body>
+<html lang="ar">
 
-  <!-- شريط التنقل -->
-  <header class="navbar">
-    <div class="logo">Zero Stress</div>
-    <nav class="nav-links">
-      <a href="#services">الخدمات</a>
-      <a href="#about">من نحن</a>
-      <a href="#contact">اتصل بنا</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zero Stress - الموقع الدراسي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>📘 Zero Stress</h1>
+    <nav>
+      <a href="#math">الرياضيات</a>
+      <a href="#physics">الفيزياء</a>
+      <a href="#biology">العلوم الطبيعية</a>
+      <a href="#tech">التكنولوجيا</a>
+      <a href="#bac">مواضيع باكالوريا</a>
     </nav>
+    <input type="text" id="searchBar" placeholder="🔍 ابحث هنا...">
   </header>
 
-  <!-- واجهة الترحيب -->
-  <section class="hero">
+  <div class="hero">
     <div class="hero-content">
-      <h1>تعلم براحة، دون توتر</h1>
-      <p>دروس، دعم، تمارين تفاعلية - أينما كنت</p>
-      <button onclick="scrollToSection()">ابدأ الآن</button>
+      <h2>مرحبا بك في عالم الدراسة بدون توتر 📚</h2>
+      <p>أدوات، دروس، ومراجعة منظمة لنجاح مضمون إن شاء الله</p>
     </div>
+  </div>
+
+  <section id="math">
+    <h3>📐 الرياضيات</h3>
+    <p>تمارين + شروحات فيديو + أوراق عمل</p>
   </section>
 
-  <!-- الخدمات -->
-  <section id="services" class="section services">
-    <h2>ماذا نقدم؟</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>دروس مباشرة</h3>
-        <p>نقدم شرحًا مباشرًا مبسطًا لجميع المستويات التعليمية.</p>
-      </div>
-      <div class="card">
-        <h3>متابعة مستمرة</h3>
-        <p>نتابع تطور كل تلميذ، ونوجهه حسب مستواه.</p>
-      </div>
-      <div class="card">
-        <h3>تمارين تفاعلية</h3>
-        <p>حل تمارين واختبارات في بيئة ممتعة ومرنة.</p>
-      </div>
-    </div>
+  <section id="physics">
+    <h3>⚛️ الفيزياء</h3>
+    <p>دروس مفصلة، تجارب، وشرح مبسط للقوانين</p>
   </section>
 
-  <!-- من نحن -->
-  <section id="about" class="section about">
-    <h2>من نحن؟</h2>
-    <p>نحن فريق شغوف بالتعليم والدعم الدراسي. نؤمن أن كل تلميذ يمكنه التفوق إذا توفرت له الوسائل المناسبة.</p>
+  <section id="biology">
+    <h3>🧬 العلوم الطبيعية</h3>
+    <p>كل ما تحتاجه لفهم دروس الأحياء بشكل مبسط وواضح</p>
   </section>
 
-  <!-- اتصل بنا -->
-  <section id="contact" class="section contact">
-    <h2>اتصل بنا</h2>
-    <form>
-      <input type="text" placeholder="اسمك الكامل" required />
-      <input type="email" placeholder="بريدك الإلكتروني" required />
-      <textarea placeholder="رسالتك" required></textarea>
-      <button type="submit">إرسال</button>
-    </form>
+  <section id="tech">
+    <h3>💻 التكنولوجيا</h3>
+    <p>مقالات + مشاريع تطبيقية + مفاهيم مبسطة</p>
   </section>
 
-  <!-- الفوتر -->
+  <section id="bac">
+    <h3>🎓 مواضيع باكالوريا مقترحة</h3>
+    <p>باكالوريات السنوات الماضية + مواضيع مقترحة + تصحيحات نموذجية</p>
+  </section>
+
+  <!-- خصائص إضافية -->
+  <section id="features">
+    <h3>⭐ خصائص إضافية</h3>
+    <ul>
+      <li>📅 تقويم دراسي تفاعلي</li>
+      <li>📝 إمكانية تدوين الملاحظات</li>
+      <li>🔔 تذكيرات بالمواعيد المهمة</li>
+      <li>🎥 دروس مرئية عالية الجودة</li>
+      <li>🤝 مساحة للأسئلة والمناقشات</li>
+    </ul>
+  </section>
+
   <footer>
-    <p>&copy; 2025 Zero Stress. جميع الحقوق محفوظة.</p>
+    <p>&copy; 2025 Zero Stress - كل الحقوق محفوظة</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
