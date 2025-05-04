@@ -1,120 +1,43 @@
-/* Reset بسيط */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  direction: rtl;
-  font-family: "Cairo", sans-serif;
-}
-
-/* خلفية متدرجة مع إيموجيات متحركة */
-body {
-  background: linear-gradient(to bottom right, #a0dff9, #e0f7ff);
-  color: #00334e;
-  padding-bottom: 100px;
-  background-image: url('https://em-content.zobj.net/thumbs/240/apple/354/notebook_1f4d3.png'),
-                    url('https://em-content.zobj.net/thumbs/240/apple/354/pencil_270f-fe0f.png'),
-                    url('https://em-content.zobj.net/thumbs/240/apple/354/books_1f4da.png');
-  background-repeat: repeat;
-  background-size: 50px;
-  animation: bgMove 60s linear infinite;
-}
-
-/* تحريك الخلفية */
-@keyframes bgMove {
-  from { background-position: 0 0; }
-  to { background-position: 1000px 1000px; }
-}
-
-header {
-  background-color: rgba(0, 102, 204, 0.8);
-  padding: 20px;
-  text-align: center;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-nav {
-  margin-top: 10px;
-}
-
-nav a {
-  color: white;
-  margin: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #ffd700;
-}
-
-#searchBar {
-  margin-top: 10px;
-  padding: 10px;
-  width: 80%;
-  max-width: 400px;
-  border: none;
-  border-radius: 20px;
-  font-size: 16px;
-}
-
-.hero {
-  padding: 80px 20px;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  margin-bottom: 30px;
-  animation: fadeIn 1.5s ease-in;
-}
-
-.hero-content h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.hero-content p {
-  font-size: 18px;
-  color: #00334e;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-section {
-  padding: 30px 20px;
-  border-bottom: 1px solid #ccc;
-  animation: fadeIn 1s ease forwards;
-}
-
-section h3 {
-  font-size: 26px;
-  color: #00557a;
-  margin-bottom: 10px;
-}
-
-section p, section ul {
-  font-size: 18px;
-  color: #002b45;
-  line-height: 1.6;
-}
-
-ul li {
-  margin: 8px 0;
-}
-
-footer {
-  text-align: center;
-  background-color: #00557a;
-  color: white;
-  padding: 15px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
+<!DOCTYPE html><html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منصة النجاح</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">من نحن</a></li>
+        <li><a href="#sections">أقسام البكالوريا</a></li>
+        <li><a href="#courses">دورات النجاح</a></li>
+        <li><a href="#contact">اتصل بنا</a></li>
+      </ul>
+    </nav>
+  </header>  <section id="about" class="section">
+    <h1>من نحن</h1>
+    <p class="description">
+      نحن فريق شغوف من المربين والمطورين، نؤمن أن كل تلميذ يستحق فرصة عادلة للنجاح. نقدم لك محتوى موثوقاً، ودعماً مستمراً، وتجربة تعليمية فريدة تدمج بين التعلم الذاتي والحضوري، لنرافقك خطوة بخطوة نحو التفوق بثقة وأمان.
+    </p>
+    <div class="motivations">
+      <p>رحلتك تبدأ من هنا...</p>
+      <p>أنت أقوى مما تظن، وأقرب مما تتصور.</p>
+    </div>
+  </section>  <section id="sections" class="section">
+    <h2>أقسام البكالوريا</h2>
+    <div class="buttons">
+      <button onclick="toggleUnits('math')">رياضيات</button>
+      <button onclick="toggleUnits('physics')">فيزياء</button>
+      <button onclick="toggleUnits('bio')">علوم الطبيعة</button>
+      <button onclick="toggleUnits('tech')">تكنولوجيا</button>
+    </div>
+    <div id="units"></div>
+  </section>  <section id="courses" class="section">
+    <h2>دورات النجاح</h2>
+    <p>اكتشف الدورات المصممة خصيصاً لتعزيز مهاراتك في التحليل، الحل، والفهم العميق للمفاهيم.</p>
+  </section>  <section id="contact" class="section">
+    <h2>اتصل بنا</h2>
+    <p>نحن هنا لمساعدتك. لا تتردد في التواصل معنا عبر البريد أو صفحاتنا الرسمية.</p>
+  </section>  <script src="script.js"></script></body>
+</html>
