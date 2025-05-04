@@ -1,43 +1,92 @@
-<!DOCTYPE html><html lang="ar">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>منصة النجاح</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#about">من نحن</a></li>
-        <li><a href="#sections">أقسام البكالوريا</a></li>
-        <li><a href="#courses">دورات النجاح</a></li>
-        <li><a href="#contact">اتصل بنا</a></li>
-      </ul>
-    </nav>
-  </header>  <section id="about" class="section">
-    <h1>من نحن</h1>
-    <p class="description">
-      نحن فريق شغوف من المربين والمطورين، نؤمن أن كل تلميذ يستحق فرصة عادلة للنجاح. نقدم لك محتوى موثوقاً، ودعماً مستمراً، وتجربة تعليمية فريدة تدمج بين التعلم الذاتي والحضوري، لنرافقك خطوة بخطوة نحو التفوق بثقة وأمان.
-    </p>
-    <div class="motivations">
-      <p>رحلتك تبدأ من هنا...</p>
-      <p>أنت أقوى مما تظن، وأقرب مما تتصور.</p>
-    </div>
-  </section>  <section id="sections" class="section">
-    <h2>أقسام البكالوريا</h2>
-    <div class="buttons">
-      <button onclick="toggleUnits('math')">رياضيات</button>
-      <button onclick="toggleUnits('physics')">فيزياء</button>
-      <button onclick="toggleUnits('bio')">علوم الطبيعة</button>
-      <button onclick="toggleUnits('tech')">تكنولوجيا</button>
-    </div>
-    <div id="units"></div>
-  </section>  <section id="courses" class="section">
-    <h2>دورات النجاح</h2>
-    <p>اكتشف الدورات المصممة خصيصاً لتعزيز مهاراتك في التحليل، الحل، والفهم العميق للمفاهيم.</p>
-  </section>  <section id="contact" class="section">
-    <h2>اتصل بنا</h2>
-    <p>نحن هنا لمساعدتك. لا تتردد في التواصل معنا عبر البريد أو صفحاتنا الرسمية.</p>
-  </section>  <script src="script.js"></script></body>
-</html>
+/* style.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+header {
+  background: #111;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: #0ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+main {
+  padding: 2rem;
+}
+
+.neon-box {
+  border: 2px solid #0ff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 0 20px #0ff;
+  background: rgba(0, 255, 255, 0.05);
+  transition: 0.3s ease-in-out;
+}
+
+.quote {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 1rem auto;
+  color: #0ff;
+  font-style: italic;
+}
+
+button {
+  background: transparent;
+  color: #0ff;
+  border: 1px solid #0ff;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0ff;
+  color: #000;
+}
+
+.units {
+  margin: 1rem 0 2rem 0;
+  padding-left: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* خلفية انميشن */
+#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
